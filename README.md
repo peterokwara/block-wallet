@@ -9,34 +9,48 @@
   </a>
 </p>
 
-# BlockWallet Code Challenge
+<br>
 
-React App with TypeScript template
+## Table of contents
 
-## Task
+-   [About the Website](#about-the-website)
+-   [Technical](#technical)
+-   [Licence](#license)
+-   [Versions](#versions)
+-   [Contact Information](#contact-information)
 
-Build a **mock app** to send ETH (without interacting with any blockchain or wallet) with the given user interface.
+### About the website
 
-### Key points
+A mock app built using React and Typescript that enables one to send Eth from one person to another.
 
-- Transactions must be **stored and fetched** making use of the `TransactionsService` `addTransaction()` and `getListOfTransactions()` methods
-- Past transactions must be *listed* on the **main page**
-- You would need to add an **amount to transfer** input field (note: it's not present in the image, styling should be consistent)
-- Styling and layout do not have to be necessarily like the provided image
-
-### Steps
-
-- **Fork** the repo into a public Github repository.
-- Add the needed **commits** (preferably following a convention) to fulfill the task.
-- Push the code to **Github**.
-- Send the **public link** and explanations if needed to our team.
-- Wait for our feedback :)
-
-## What will be evaluated?
-
-- Architecture skills.
-- React and frontend skills.
-- Clean and consistent interface would be a bonus.
-
-## Reference layout
 ![alt text](test-task-ui.png)
+
+### Technical
+
+The project has been created using `create-react-app`. To run the project, run:
+
+```console
+npm run start
+```
+
+A live version of the site can be found [here](https://block-wallet-six.vercel.app/).
+
+### License
+
+-   see [LICENSE](https://github.com/peterokwara/block-wallet/blob/master/LICENSE) file
+
+### Versions
+
+-   Version 1.0 DATE 18/09/2022
+
+### Contact Information
+
+If you have found any bugs, or have any feedback or questions and or want to post a feature request please use the [Issuetracker](https://github.com/peterokwara/block-wallet/issues) to report them.
+
+<hr>
+
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source-200x33.png?v=103)](#)
+
+<br>
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/peterokwara/block-wallet/blob/master/LICENSE)
