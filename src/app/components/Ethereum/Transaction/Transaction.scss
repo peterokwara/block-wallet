@@ -1,0 +1,56 @@
+.transaction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .ethereum-icon {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+
+    .transaction-info {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        .amount-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 100%;
+
+            .amount-eth {
+                font-size: medium;
+                margin: 5px;
+                font-weight: 700;
+                width: 100%;
+                text-align: right;
+            }
+            .amount-usd {
+                font-size: medium;
+                margin: 5px;
+                color: #9ca3af;
+                font-weight: 400;
+                width: 100%;
+                text-align: right;
+            }
+        }
+        .transaction-details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+
+            .event {
+                font-size: medium;
+                margin: 5px;
+                font-weight: 700;
+            }
+            .timestamp {
+                font-size: medium;
+                margin: 5px;
+                color: #9ca3af;
+                font-weight: 400;
+            }
+        }
+    }
+}

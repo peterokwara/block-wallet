@@ -1,0 +1,20 @@
+.footer {
+    width: 100%;
+    bottom: 0px;
+    grid-area: footer;
+   
+
+    .line {
+        border: 2px solid #e5e7eb;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        justify-content: space-between;
+    }
+}

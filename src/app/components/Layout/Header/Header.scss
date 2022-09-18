@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    height: max-content;
+    grid-area: header;
+
+    .heading-content {
+        display: flex;
+        padding-top: 25px;
+        padding-bottom: 15px;
+    }
+
+    .line {
+        border: 2px solid #e5e7eb;
+        bottom: 0px;
+    }
+}

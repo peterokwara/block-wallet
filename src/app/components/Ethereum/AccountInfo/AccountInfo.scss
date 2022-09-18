@@ -1,0 +1,37 @@
+.account-info {
+    background-color: #dbeafe;
+    .account-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        .account-amount-eth {
+            color: black;
+            font-weight: 700;
+            font-size: xx-large;
+            text-align: center;
+            margin: 5px;
+        }
+        .account-amount-usd {
+            color: #6b7280;
+            font-weight: 400;
+            font-size: larger;
+            text-align: center;
+            margin: 5px;
+        }
+        .send-button {
+            border: none;
+            background-color: #dbeafe;
+            padding-top: 30px;
+            .send-image {
+                height: 50px;
+                width: 50px;
+                object-fit: cover;
+            }
+            .send-text {
+                font-weight: 400;
+                font-size: medium;
+            }
+        }
+    }
+}
