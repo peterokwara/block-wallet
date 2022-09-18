@@ -1,5 +1,5 @@
 import React from "react";
-import AppState from "./context/background/AppState";
+import AppState from "../context/background/AppState";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./routes/Home/Home";
 import { SendEther } from "./routes/SendEther/SendEther";

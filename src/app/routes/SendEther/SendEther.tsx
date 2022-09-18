@@ -6,7 +6,7 @@ import { Header } from "../../components/Layout/Header/Header";
 import { Heading } from "../../components/Common/Heading/Heading";
 import { useNavigate } from "react-router-dom";
 import "./SendEther.scss";
-import AppContext from "../../context/background/AppContext";
+import AppContext from "../../../context/background/AppContext";
 import defaults from "../../../utils/constants";
 import { DateHelper } from "../../../utils/dateHelper";
 
@@ -46,6 +46,7 @@ export const SendEther: React.FunctionComponent = () => {
             date: dateHelper.currentDate()
         };
         addTransaction(newTransaction);
+        defaults.accountBalance -= Number(amount);
         navigate("/success");
     };
 

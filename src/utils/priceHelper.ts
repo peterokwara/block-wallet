@@ -8,7 +8,7 @@ export class PriceHelper {
      * @returns The price in Ethereum.
      */
     public ethPrice(accountBalance: number): number {
-        return accountBalance;
+        return Math.round(accountBalance);
     }
 
     /**
@@ -18,6 +18,6 @@ export class PriceHelper {
      * @returns
      */
     public usdPrice(accountBalance: number, ethPrice: number): number {
-        return accountBalance * ethPrice;
+        return Math.round(accountBalance * ethPrice);
     }
 }

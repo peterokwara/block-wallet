@@ -7,7 +7,7 @@ import { Transaction } from "../../components/Ethereum/Transaction/Transaction";
 import defaults from "../../../utils/constants";
 import "./Home.scss";
 import { PriceHelper } from "../../../utils/priceHelper";
-import AppContext from "../../context/background/AppContext";
+import AppContext from "../../../context/background/AppContext";
 
 /**
  * Component that shows the home page.

@@ -1,4 +1,4 @@
-import { Transaction } from "../services/TransactionsService";
+import { Transaction } from "../../services/TransactionsService";
 import { IAppState } from "./background/AppState";
 
 enum Actions {
