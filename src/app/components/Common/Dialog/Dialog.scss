@@ -1,0 +1,12 @@
+// mt-40 bg-blue-50 dialog
+// float-right close
+
+.dialog {
+    .dialog-details {
+        display: flex;
+        flex-direction: column;
+        .close {
+            text-align: right;
+        }
+    }
+}

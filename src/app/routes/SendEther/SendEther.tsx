@@ -4,6 +4,7 @@ import { InputField } from "../../components/Forms/InputField/InputField";
 import { Footer } from "../../components/Layout/Footer/Footer";
 import { Header } from "../../components/Layout/Header/Header";
 import { Heading } from "../../components/Common/Heading/Heading";
+import { Dialog } from "../../components/Common/Dialog/Dialog";
 import { useNavigate } from "react-router-dom";
 import "./SendEther.scss";
 import AppContext from "../../../context/background/AppContext";
@@ -19,6 +20,10 @@ export const SendEther: React.FunctionComponent = () => {
     const [address, setaddress] = useState("");
     const [amount, setamount] = useState("");
 
+    // Modal
+    const [open, setOpen] = React.useState(false);
+    const [content, setContent] = React.useState("");
+
     // Navigation
     const navigate = useNavigate();
 
@@ -32,11 +37,26 @@ export const SendEther: React.FunctionComponent = () => {
     };
 
     /**
-     * Function to process the input
+     * Function to process the input.
      * @param event The event.
      */
     const onClickNext = (event: MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
+
+        // Show a dialog box in case amount is not enough.
+        if (defaults.accountBalance < Number(amount)) {
+            setOpen(true);
+            setContent("Error! The amount to transfer is more that the account balance.");
+            return;
+        }
+
+        // Show a dialog box in case there is no amount.
+        if (!Number(amount)) {
+            setOpen(true);
+            setContent("Error! The amount to transfer is zero.");
+            return;
+        }
+
         const dateHelper = new DateHelper();
         const newTransaction = {
             id: state.transactions.length,
@@ -69,12 +89,27 @@ export const SendEther: React.FunctionComponent = () => {
         setaddress(event.target.value);
     };
 
+    /**
+     * Funtion to handle the modal closing.
+     */
+    const handleToClose = () => {
+        setOpen(false);
+    };
+
+    /**
+     * Function to handle the modal opening.
+     */
+    const handleClickToOpen = () => {
+        setOpen(true);
+    };
+
     return (
         <div className="send-ether">
             <Header>
                 <Heading title="Send Ether" />
             </Header>
             <div className="content">
+                <Dialog open={open} onClose={handleToClose} content={content} />
                 <InputField
                     label="Amount to transfer"
                     placeholder="Enter amount to transfer"
