@@ -96,13 +96,6 @@ export const SendEther: React.FunctionComponent = () => {
         setOpen(false);
     };
 
-    /**
-     * Function to handle the modal opening.
-     */
-    const handleClickToOpen = () => {
-        setOpen(true);
-    };
-
     return (
         <div className="send-ether">
             <Header>
