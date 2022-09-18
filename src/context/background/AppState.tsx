@@ -1,10 +1,10 @@
 import React, { useReducer } from "react";
 import AppContext, { initAppState } from "./AppContext";
 import AppReducer from "./AppReducer";
-import Actions from "../contextActions";
 import { TransactionsService } from "../../services/TransactionsService";
 import { IAppState } from "../../models/context/background/IAppState";
 import { Transaction } from "../../models/services/ITransaction";
+import Actions from "../../models/context/IActions";
 
 const AppState = (props: any) => {
     const [state, dispatch] = useReducer(AppReducer, initAppState);
